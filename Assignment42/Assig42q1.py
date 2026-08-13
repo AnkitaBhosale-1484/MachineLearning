@@ -34,7 +34,7 @@ Predicted Class: Red'''
 
 import math
 
-def MarvellousEucDistance(P1, P2):
+def EucDistance(P1, P2):
     Ans = math.sqrt(
         (P1['X'] - P2['X']) ** 2 +
         (P1['Y'] - P2['Y']) ** 2
@@ -43,7 +43,7 @@ def MarvellousEucDistance(P1, P2):
     return Ans
 
 
-def MarvellousKnnClassifier(k=3):
+def KnnClassifier(k=3):
 
     border = "_" * 30
 
@@ -61,7 +61,7 @@ def MarvellousKnnClassifier(k=3):
 
     # Calculate distance
     for d in Data:
-        d['distance'] = MarvellousEucDistance(d, new_point)
+        d['distance'] = EucDistance(d, new_point)
 
     # Sort distances
     sorted_data = sorted(
@@ -101,7 +101,7 @@ def MarvellousKnnClassifier(k=3):
 
 
 def main():
-    MarvellousKnnClassifier()
+    KnnClassifier()
 
 
 if __name__ == "__main__":
