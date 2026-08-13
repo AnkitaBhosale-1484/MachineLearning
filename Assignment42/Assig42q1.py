@@ -29,9 +29,6 @@ C - Distance: 1.41
 
 Predicted Class: Red'''
 
-
-
-
 import math
 
 def EucDistance(P1, P2):
