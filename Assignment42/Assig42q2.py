@@ -72,7 +72,7 @@ def KnnClassifier():
 
     print("K =", k, "→", Name)
 
-    # K = 3
+    
     k = 3
 
     nearest = sorted_data[:k]
