@@ -17,7 +17,7 @@ def PlayPredictor():
         index_col=0
     )
 
-    # CSV has "Wether", assignment uses "Weather"
+    
     Data.rename(
         columns={"Wether": "Weather"},
         inplace=True
