@@ -18,7 +18,7 @@ Explain why the prediction changes when K increases.'''
 
 import math
 
-def MarvellousEucDistance(P1, P2):
+def EucDistance(P1, P2):
     Ans = math.sqrt(
         (P1['X'] - P2['X']) ** 2 +
         (P1['Y'] - P2['Y']) ** 2
@@ -27,7 +27,7 @@ def MarvellousEucDistance(P1, P2):
     return Ans
 
 
-def MarvellousKnnClassifier():
+def KnnClassifier():
 
     Data = [
         {'point': 'A', 'X': 1, 'Y': 2, 'label': 'Red'},
@@ -41,7 +41,7 @@ def MarvellousKnnClassifier():
 
     # Calculate distance
     for d in Data:
-        d['distance'] = MarvellousEucDistance(d, new_point)
+        d['distance'] = EucDistance(d, new_point)
 
     # Sort distances
     sorted_data = sorted(
@@ -116,7 +116,7 @@ def MarvellousKnnClassifier():
 
 
 def main():
-    MarvellousKnnClassifier()
+    KnnClassifier()
 
 
 if __name__ == "__main__":
