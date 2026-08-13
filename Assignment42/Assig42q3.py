@@ -21,7 +21,7 @@ Predicted Result: Pass'''
 
 import math
 
-def MarvellousEucDistance(P1, P2):
+def EucDistance(P1, P2):
     Ans = math.sqrt(
         (P1['StudyHours'] - P2['StudyHours']) ** 2 +
         (P1['Attendance'] - P2['Attendance']) ** 2
@@ -30,7 +30,7 @@ def MarvellousEucDistance(P1, P2):
     return Ans
 
 
-def MarvellousKnnClassifier(k=3):
+def KnnClassifier(k=3):
 
     Data = [
         {'StudyHours': 2, 'Attendance': 60, 'label': 'Fail'},
@@ -49,7 +49,7 @@ def MarvellousKnnClassifier(k=3):
 
     # Calculate distance
     for d in Data:
-        d['distance'] = MarvellousEucDistance(d, new_point)
+        d['distance'] = EucDistance(d, new_point)
 
     # Sort distances
     sorted_data = sorted(
@@ -93,7 +93,7 @@ def MarvellousKnnClassifier(k=3):
 
 
 def main():
-    MarvellousKnnClassifier()
+    KnnClassifier()
 
 
 if __name__ == "__main__":
