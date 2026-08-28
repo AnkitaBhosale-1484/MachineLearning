@@ -1,4 +1,4 @@
-'''
+'''Create a gender column and perform one-hot encoding.
 '''
 
 import pandas as pd
